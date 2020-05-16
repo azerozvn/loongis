@@ -32,6 +32,10 @@ function App() {
 		}
 	];
 
+	const socialItems = social.map((s) => {
+		return <SocialNetwork social={s} />;
+	});
+
 	return (
 		<div className="App">
 			<Navbar />
@@ -74,11 +78,7 @@ function App() {
 						<p>
 							Feeling cool? Reach me at <a href="mailto:longnb306@gmail.com">longnb306@gmail.com</a>
 						</p>
-						<div className="social-network">
-							{social.map((s, i) => {
-								return <SocialNetwork social={s} />;
-							})}
-						</div>
+						<div className="social-network">{socialItems}</div>
 					</div>
 				</div>
 			</div>
