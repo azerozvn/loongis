@@ -15,8 +15,8 @@ class TypeWriter {
 
 		// Check Deleting
 		if (this.isDeleting) {
-			if (this.txt === fullTxt){
-				this.txtElement.style.borderRight = "0.2rem solid #bbb";
+			if (this.txt === fullTxt) {
+				this.txtElement.style.borderRight = '0.2rem solid #bbb';
 			}
 			// Set speed twice as fast
 			typeSpeed /= 2;
@@ -35,7 +35,7 @@ class TypeWriter {
 			// Add pause at end
 			typeSpeed = this.wait;
 			// Remove writing cursor
-			this.txtElement.style.borderRight = "none";
+			this.txtElement.style.borderRight = 'none';
 			// Set phase to delete
 			this.isDeleting = true;
 		} else if (this.isDeleting && this.txt === '') {

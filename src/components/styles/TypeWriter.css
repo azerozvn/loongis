@@ -1,0 +1,10 @@
+/* Cursor */
+.txt-type {
+	display: inline-block;
+	padding-right: 0.2rem;
+	border-right: none;
+}
+
+.txt-type.active {
+	border-right: 0.2rem solid #555;
+}
