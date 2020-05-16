@@ -32,9 +32,7 @@ function App() {
 		}
 	];
 
-	const socialItems = social.map((s) => {
-		return <SocialNetwork social={s} />;
-	});
+	const socialItems = social.map((s) => <SocialNetwork social={s} key={s.name} />);
 
 	return (
 		<div className="App">
