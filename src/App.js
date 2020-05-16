@@ -6,9 +6,9 @@ import SocialNetwork from './components/SocialNetwork';
 
 function App() {
 	const typeWriter = {
-		starter: 'I am a ',
-		wait: 2000,
-		words: [ 'Vietnamese', 'Web Developer', 'Content Creator' ]
+		typeSpeed: 400,
+		delay: 2000,
+		strings: [ 'Vietnamese', 'Web Developer', 'Content Creator' ]
 	};
 
 	const social = [
@@ -36,19 +36,21 @@ function App() {
 		<div className="App">
 			<Navbar />
 			<div className="container">
-				<div class="cover">
+				<div className="cover">
 					<h2>Hi, My name is Long.</h2>
-					<TypeWriter typeWriter={typeWriter} />
-					<div class="intro">
+					<h1>
+						I am a <TypeWriter typeWriter={typeWriter} />
+					</h1>
+					<div className="intro">
 						<p>
 							I'm living in Sacramento, CA and currently grinding my BS in Computer Science at Sac State.
 						</p>
 						<p>I weave webs and crunch bugs for food.</p>
 						<p>I love reddit, youtube and brain-hurting games.</p>
 						<p>I explore new tech, cook Asian food and cover love songs.</p>
-						<div class="container p-0">
-							<div class="row">
-								<div class="col-sm-6">
+						<div className="container p-0">
+							<div className="row">
+								<div className="col-sm-6">
 									<p>Languages I fluent?</p>
 									<ul>
 										<li>Viet (douma)</li>
@@ -57,7 +59,7 @@ function App() {
 										<li>JavaScript</li>
 									</ul>
 								</div>
-								<div class="col-sm-6">
+								<div className="col-sm-6">
 									<p>Tech I use?</p>
 									<ul>
 										<li>MEAN/MERN</li>
