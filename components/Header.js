@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Navbar from './Navbar';
 
 export class Header extends Component {
 	render() {
-		return <header>This is a header</header>;
+		return <Navbar />;
 	}
 }
 
