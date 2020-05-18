@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import TypeWriter from './TypeWriter';
-import SocialNetwork from './SocialNetWork';
+//import SocialNetwork from './SocialNetwork';
 import styles from './Home.module.css';
 
 export class Home extends Component {
@@ -32,7 +33,7 @@ export class Home extends Component {
 			}
 		];
 
-		const socialItems = social.map((s) => <SocialNetwork social={s} key={s.name} />);
+		//const socialItems = social.map((s) => <SocialNetwork social={s} key={s.name} />);
 
 		return (
 			<div className="container">
@@ -74,7 +75,6 @@ export class Home extends Component {
 						<p>
 							Feeling cool? Reach me at <a href="mailto:longnb306@gmail.com">longnb306@gmail.com</a>
 						</p>
-						<div className="social-network">{socialItems}</div>
 					</div>
 				</div>
 			</div>

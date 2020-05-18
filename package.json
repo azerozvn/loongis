@@ -9,6 +9,7 @@
 		"@zeit/next-css": "^1.0.1",
 		"aws-amplify": "^2.1.0",
 		"bootstrap": "^4.5.0",
+		"fontawesome": "^5.6.3",
 		"next": "^9.4.1",
 		"next-babel-minify": "^1.0.0",
 		"next-compose-plugins": "^2.2.0",

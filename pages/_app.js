@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import React from 'react';
 
 // This default export is required in a new `pages/_app.js` file.
