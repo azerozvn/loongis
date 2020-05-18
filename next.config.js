@@ -1,7 +1,13 @@
 const withCSS = require('@zeit/next-css');
+const withPlugins = require('next-compose-plugins');
 
-module.exports = withCSS({
-	cssLoaderOptions: {
-		url: false
-	}
-});
+module.exports = withPlugins(
+	[
+		withCSS({
+			cssLoaderOptions: {
+				url: false
+			}
+		})
+	],
+	{ experimental: { css: true } }
+);
