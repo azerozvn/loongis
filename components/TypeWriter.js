@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import styles from './TypeWriter.module.css';
 
@@ -17,6 +18,10 @@ export class TypeWriter extends Component {
 
 	componentDidMount() {
 		this.type();
+	}
+
+	componentWillUnmount() {
+		clearTimeout(this.timeoutID);
 	}
 
 	type = () => {
@@ -68,7 +73,7 @@ export class TypeWriter extends Component {
 				});
 			}
 		}
-		setTimeout(() => this.type(), timeoutSpeed);
+		this.timeoutID = setTimeout(() => this.type(), timeoutSpeed);
 	};
 
 	render() {
