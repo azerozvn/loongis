@@ -1,16 +1,23 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import Head from 'next/head';
 import styles from './Layout.module.css';
 
 export class Layout extends Component {
 	render() {
 		return (
-			<div className="app">
-				<Header />
-				{this.props.children}
-				<Footer />
-			</div>
+			<React.Fragment>
+				<Head>
+					<title>{this.props.title}</title>
+				</Head>
+				<div className="app">
+					<Header />
+					{this.props.children}
+					<Footer />
+				</div>
+			</React.Fragment>
 		);
 	}
 }
