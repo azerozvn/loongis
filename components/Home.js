@@ -15,19 +15,19 @@ export class Home extends Component {
 		const social = [
 			{
 				name: 'facebook',
-				prefix: 'fa',
+				prefix: 'fab',
 				full: 'fa-facebook-square',
 				url: 'https://www.facebook.com/azerozvn'
 			},
 			{
 				name: 'github',
-				prefix: 'fa',
+				prefix: 'fab',
 				full: 'fa-github',
 				url: 'https://github.com/azerozvn'
 			},
 			{
 				name: 'linkedin',
-				prefix: 'fa',
+				prefix: 'fab',
 				full: 'fa-linkedin',
 				url: 'https://www.linkedin.com/in/azerozvn/'
 			}
