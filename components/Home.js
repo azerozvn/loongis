@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import TypeWriter from './TypeWriter';
 import SocialNetwork from './SocialNetwork';
-import styles from './Home.module.css';
+import '../styles/Home.scss';
 
 export class Home extends Component {
 	render() {

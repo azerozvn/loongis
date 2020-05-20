@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-import styles from './SocialNetwork.module.css';
+import '../styles/SocialNetwork.scss';
 
 export class SocialNetwork extends Component {
 	render() {

@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-import styles from './Navbar.module.css';
 import Link from 'next/link';
+import '../styles/Navbar.scss';
 
 export class Navbar extends Component {
 	render() {

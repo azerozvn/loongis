@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-import styles from './TypeWriter.module.css';
+import '../styles/TypeWriter.scss';
 
 export class TypeWriter extends Component {
 	constructor(props) {

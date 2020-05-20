@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Head from 'next/head';
-import styles from './Layout.module.css';
+import '../styles/Layout.scss';
 
 export class Layout extends Component {
 	render() {

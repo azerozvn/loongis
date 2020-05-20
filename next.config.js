@@ -10,6 +10,12 @@ const nextConfig = {
 module.exports = withPlugins(
 	[
 		[
+			withSass,
+			{
+				cssModules: false
+			}
+		],
+		[
 			withCSS,
 			{
 				cssLoaderOptions: {
