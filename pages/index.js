@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import Layout from '../components/Layout';
 import Home from '../components/Home';
+import Link from 'next/link';
 import { getSortedPostData } from '../lib/post';
 
 export class HomePage extends Component {
@@ -18,11 +20,15 @@ export class HomePage extends Component {
 				<div className="container">
 					{this.allPostData.map((post) => {
 						return (
-							<p key={post.id}>
-								<b>
-									{post.title} - {post.date}
-								</b>
-							</p>
+							<div>
+								<Link href={'/post/' + post.id}>
+									<a key={post.id}>
+										<b>
+											{post.title} - {post.date}
+										</b>
+									</a>
+								</Link>
+							</div>
 						);
 					})}
 				</div>
