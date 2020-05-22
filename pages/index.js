@@ -7,7 +7,6 @@ export class HomePage extends Component {
 	constructor(props) {
 		super(props);
 		this.allPostData = this.props.allPostData;
-		console.log(this.allPostData);
 	}
 
 	render() {
