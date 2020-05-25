@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import Link from 'next/link';
 import '../styles/Navbar.scss';
@@ -13,6 +12,11 @@ export class Navbar extends Component {
 						<li className="nav-item">
 							<Link href="/">
 								<a>Home</a>
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link href="/post">
+								<a>Post</a>
 							</Link>
 						</li>
 						<li className="nav-item">
