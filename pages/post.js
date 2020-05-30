@@ -1,8 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import Layout from '../components/Layout';
 import Slider from '../components/Slider';
-import Link from 'next/link';
+import Card from '../components/Card';
 import { getSortedPostData } from '../lib/post';
 import { getRandomQuote } from '../lib/quote';
 
@@ -14,26 +13,28 @@ export class PostPage extends Component {
 			quote: this.props.quote
 		};
 	}
+
 	render() {
 		const title = 'Loongis | Post';
+		const Cards = () => {
+			const cards = this.allPostData.map((post, index) => {
+				const card = (
+					<div className="col-md-4 col-sm-6 col-xs-12 py-3" key={post.id}>
+						<Card data={post} />
+					</div>
+				);
+				return card;
+			});
+			return cards;
+		};
 
 		return (
 			<Layout title={title}>
 				<Slider sliderData={this.sliderData} />
-				<div className="container">
-					{this.allPostData.map((post) => {
-						return (
-							<div key={post.id}>
-								<Link href={'/post/' + post.id}>
-									<a>
-										<b>
-											{post.title} - {post.date}
-										</b>
-									</a>
-								</Link>
-							</div>
-						);
-					})}
+				<div className="container py-4">
+					<div className="row flex-row">
+						<Cards />
+					</div>
 				</div>
 			</Layout>
 		);

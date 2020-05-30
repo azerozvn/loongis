@@ -1,0 +1,23 @@
+.card {
+	&:hover {
+		cursor: pointer;
+	}
+	.card-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		.author-box {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			.author-avatar {
+				width: 50px;
+			}
+			.author-info {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}
