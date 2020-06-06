@@ -19,7 +19,7 @@ export class PostPage extends Component {
 		const Cards = () => {
 			const cards = this.allPostData.map((post, index) => {
 				const card = (
-					<div className="col-md-4 col-sm-6 col-xs-12 py-3" key={post.id}>
+					<div className="col-md-4 col-sm-6 col-xs-12 py-3 d-flex" key={post.id}>
 						<Card data={post} />
 					</div>
 				);
