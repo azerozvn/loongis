@@ -28,7 +28,7 @@ export class Slider extends Component {
 		}
 
 		return (
-			<div className="slider">
+			<div className="slider d-xs-none">
 				<div className="slider-veil" />
 				<img className="slider-img img-fluid" src="https://picsum.photos/3000/600" alt="slider-img" />
 				{quote}

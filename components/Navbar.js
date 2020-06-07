@@ -7,24 +7,28 @@ export class Navbar extends Component {
 	render() {
 		return (
 			<div className="bg-lighter">
-				<nav className="container navbar nav justify-content-end">
-					<ul>
-						<li className="nav-item">
-							<Link href="/">
-								<a>Home</a>
-							</Link>
-						</li>
-						<li className="nav-item">
-							<Link href="/post">
-								<a>Post</a>
-							</Link>
-						</li>
-						<li className="nav-item">
-							<Link href="/hire">
-								<a>Hire</a>
-							</Link>
-						</li>
-					</ul>
+				<nav className="container navbar navbar-expand-sm">
+					<div className="navbar-brand">
+						<Link href="/">
+							<a>
+								<b>Loongis.me</b>
+							</a>
+						</Link>
+					</div>
+					<div className="collapse navbar-collapse nav justify-content-end">
+						<ul>
+							<li className="nav-item">
+								<Link href="/post">
+									<a>Post</a>
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link href="/hire">
+									<a>Hire</a>
+								</Link>
+							</li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 		);

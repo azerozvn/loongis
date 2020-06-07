@@ -4,6 +4,12 @@
 	padding: 0;
 }
 
+.navbar-brand a {
+	text-decoration: none;
+	color: #333;
+	font-size: 1.2rem;
+}
+
 .navbar ul {
 	margin-bottom: 0;
 	list-style-type: none;

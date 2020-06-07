@@ -1,5 +1,6 @@
 .card {
-	&:hover {
+	h4.card-title,
+	img.card-img-top:hover {
 		cursor: pointer;
 	}
 	.card-footer {

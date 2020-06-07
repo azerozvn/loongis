@@ -32,6 +32,12 @@ export class PostPage extends Component {
 			<Layout title={title}>
 				<Slider sliderData={this.sliderData} />
 				<div className="container py-4">
+					<div className="row">
+						<div className="col">
+							<h2 className="display-4">Post</h2>
+							<p className="lead">Holds thinkings about my life and the world.</p>
+						</div>
+					</div>
 					<div className="row flex-row">
 						<Cards />
 					</div>
