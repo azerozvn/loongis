@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import Layout from '../../components/Layout';
+import SinglePost from '../../components/SinglePost';
+import Slider from '../../components/Slider';
+import { getRandomQuote } from '../../lib/quote';
 import { getAllPostIds, getPostData } from '../../lib/post';
-import PostComponent from '../../components/Post';
 
 export class Post extends Component {
 	constructor(props) {
 		super(props);
 		this.postData = this.props.postData;
+		this.sliderData = {
+			quote: this.props.quote
+		};
 	}
 
 	render() {
@@ -14,7 +19,8 @@ export class Post extends Component {
 
 		return (
 			<Layout title={title}>
-				<PostComponent postData={this.postData} />
+				<Slider sliderData={this.sliderData} />
+				<SinglePost postData={this.postData} />
 			</Layout>
 		);
 	}
@@ -30,9 +36,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params.id);
+	const quote = getRandomQuote();
 	return {
 		props: {
-			postData
+			postData,
+			quote
 		}
 	};
 }

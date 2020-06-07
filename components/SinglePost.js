@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Post extends Component {
+export class SinglePost extends Component {
 	constructor(props) {
 		super(props);
 		this.postData = this.props.postData;
@@ -18,4 +18,4 @@ export class Post extends Component {
 	}
 }
 
-export default Post;
+export default SinglePost;
