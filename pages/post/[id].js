@@ -20,7 +20,9 @@ export class Post extends Component {
 		return (
 			<Layout title={title}>
 				<Slider sliderData={this.sliderData} />
-				<SinglePost postData={this.postData} />
+				<div className="container">
+					<SinglePost postData={this.postData} />
+				</div>
 			</Layout>
 		);
 	}

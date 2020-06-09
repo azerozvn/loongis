@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/SinglePost.scss';
 
 export class SinglePost extends Component {
 	constructor(props) {
@@ -8,11 +9,9 @@ export class SinglePost extends Component {
 
 	render() {
 		return (
-			<div className="container">
-				<p>
-					{this.postData.title} - {this.postData.date}
-				</p>
-				<div dangerouslySetInnerHTML={{ __html: this.postData.contentHtml }} />
+			<div className="post py-4">
+				<h1 className="h1 text-center py-2">{this.postData.title}</h1>
+				<div className="post-content mt-2" dangerouslySetInnerHTML={{ __html: this.postData.contentHtml }} />
 			</div>
 		);
 	}

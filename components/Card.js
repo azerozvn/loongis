@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import Link from 'next/link';
+import Date from './Date';
 import '../styles/Card.scss';
 
 export class Card extends Component {
@@ -37,7 +38,9 @@ export class Card extends Component {
 							<span className="author-title">Admin</span>
 						</div>
 					</div>
-					<span className="post-date">{this.data.date}</span>
+					<span className="post-date">
+						<Date dateString={this.data.date} />
+					</span>
 				</div>
 			</div>
 		);
