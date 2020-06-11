@@ -17,11 +17,11 @@ export class Navbar extends Component {
 					</div>
 					<div className="collapse navbar-collapse nav justify-content-end">
 						<ul>
-							<li className="nav-item">
+							{/* <li className="nav-item">
 								<Link href="/post">
 									<a>Post</a>
 								</Link>
-							</li>
+							</li> */}
 							<li className="nav-item">
 								<Link href="/hire">
 									<a>Hire</a>
