@@ -23,6 +23,11 @@ export class Navbar extends Component {
 								</Link>
 							</li> */}
 							<li className="nav-item">
+								<Link href="/gallery">
+									<a>Gallery</a>
+								</Link>
+							</li>
+							<li className="nav-item">
 								<Link href="/hire">
 									<a>Hire</a>
 								</Link>
