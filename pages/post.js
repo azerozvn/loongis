@@ -16,18 +16,14 @@ export class PostPage extends Component {
 
 	render() {
 		const title = 'Loongis | Post';
-		const Cards = () => {
-			const cards = this.allPostData.map((post, index) => {
-				const card = (
-					<div className="col-md-4 col-sm-6 col-xs-12 py-3 d-flex" key={post.id}>
-						<Card data={post} />
-					</div>
-				);
-				return card;
-			});
-			return cards;
-		};
-
+		const Cards = () => this.allPostData.map((post, index) => {
+			return (
+				<div className="col-sm-4 col-xs-12 py-3 d-flex" key={post.id}>
+					<Card data={post} />
+				</div>
+			)
+		});
+	
 		return (
 			<Layout title={title}>
 				<Slider sliderData={this.sliderData} />

@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Slider from '../components/Slider';
 import { getRandomQuote } from '../lib/quote';
 import { getGalleryImages } from '../lib/gallery';
+import '../styles/GalleryImage.scss';
 
 export class Gallery extends Component {
     constructor(props) {
@@ -15,6 +16,18 @@ export class Gallery extends Component {
 
     render() {
         const title = 'Loongis | Gallery';
+        const Images = () => this.galleryData.map((image, index) => {
+            let imagePerRowClass = 'p-1 col-xs-12 ';
+            if (index % 7 < 4) imagePerRowClass += 'col-sm-3'
+            else imagePerRowClass += 'col-sm-4';
+            return (
+                <div className={imagePerRowClass} key={image.id}> 
+                    <div className="gallery-image-box">
+                        <img src={image.src} className="gallery-image"/>
+                    </div>
+                </div>
+            )
+        });
 
         return (
             <Layout title={title}>
@@ -27,7 +40,7 @@ export class Gallery extends Component {
 						</div>
 					</div>
 					<div className="row flex-row">
-						
+						<Images />
 					</div>
 				</div>
 			</Layout>
