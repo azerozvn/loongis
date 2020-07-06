@@ -4,6 +4,8 @@ import Slider from '../components/Slider';
 import { getRandomQuote } from '../lib/quote';
 import { getGalleryImages } from '../lib/gallery';
 import '../styles/GalleryImage.scss';
+import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+
 
 export class Gallery extends Component {
     constructor(props) {
@@ -12,6 +14,16 @@ export class Gallery extends Component {
         this.sliderData = {
             quote: this.props.quote
         }
+    }
+
+    state = {
+        modal: false
+    }
+
+    toggle = () => {
+        this.setState({
+            modal: !this.state.modal
+        });
     }
 
     render() {
@@ -28,6 +40,22 @@ export class Gallery extends Component {
                 </div>
             )
         });
+        const Modal = () => 
+        (
+            <MDBContainer>
+                <MDBBtn onClick={this.toggle}>Modal</MDBBtn>
+                <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
+                    <MDBModalHeader toggle={this.toggle}>MDBModal title</MDBModalHeader>
+                    <MDBModalBody>
+                    (...)
+                    </MDBModalBody>
+                    <MDBModalFooter>
+                    <MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
+                    <MDBBtn color="primary">Save changes</MDBBtn>
+                    </MDBModalFooter>
+                </MDBModal>
+            </MDBContainer>
+        );
 
         return (
             <Layout title={title}>
@@ -43,6 +71,7 @@ export class Gallery extends Component {
 						<Images />
 					</div>
 				</div>
+                <Modal />
 			</Layout>
         )
     }
