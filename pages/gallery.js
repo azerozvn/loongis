@@ -68,17 +68,25 @@ export class Gallery extends Component {
         const GalleryModal = () => 
         (
             <MDBContainer>
-                <MDBModal isOpen={this.state.modal} toggle={this.closeGalleryView} size="fluid">
+                <MDBModal isOpen={this.state.modal} toggle={this.closeGalleryView} size="fluid" backdrop={false}>
+                    <div className="gallery-modal-backdrop">
+                        <img src={this.state.image.src} className="gallery-modal-backdrop-image"/>
+                        <div className="gallery-modal-backdrop-veil"></div>
+                    </div>
                     <MDBModalBody>
                         <div className="gallery-modal-box">
+                            {/* Close btn */}
                             <div className="gallery-modal-control gallery-modal-close m-4" onClick={this.closeGalleryView}><b>X</b></div>
+                            {/* Prev btn */}
                             {
                                 this.getIndex() > 0 && 
                                 <div className="gallery-modal-control gallery-modal-left-chevron mx-4" onClick={this.prev}><i className="fa fa-chevron-left" aria-hidden="true"></i></div>
                             }
+                            {/* Main image */}
                             <div className="container">
                                 <img src={this.state.image.src} className="gallery-modal-image"/>
                             </div>
+                            {/* Next btn */}
                             {
                                 this.getIndex() < this.galleryData.length - 1 &&
                                 <div className="gallery-modal-control gallery-modal-right-chevron mx-4" onClick={this.next}><i className="fa fa-chevron-right" aria-hidden="true"></i></div>
