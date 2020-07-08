@@ -104,7 +104,7 @@ export class Gallery extends Component {
 					<div className="row">
 						<div className="col">
 							<h2 className="display-4">Gallery</h2>
-							<p className="lead">A picture says a thousand words.</p>
+							<p className="lead">A picture is worth a thousand words.</p>
 						</div>
 					</div>
 					<div className="row flex-row">
